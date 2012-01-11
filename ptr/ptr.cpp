@@ -40,14 +40,13 @@ public:
 template <class T> 
 class scoped_ptr {
 private:
-	explicit scoped_ptr(const scoped_ptr <T>& p) {}
-	scoped_ptr <T>& operator = (const scoped_ptr <T>& p) const {}
+	scoped_ptr(const scoped_ptr <T>& p);
+	scoped_ptr <T>& operator = (const scoped_ptr <T>& p) const;
 	T* ptr;
 	deleter <T> del;
 
 public:
-    explicit scoped_ptr(T* p = 0) { ptr = p; }
-    explicit scoped_ptr(T* p, const deleter <T>& d) { ptr = p; del = d; }
+    explicit scoped_ptr(T* p, const deleter <T>& d) : ptr (p), del (d) { }
     ~scoped_ptr() {
     	if (!isNull()) {
     		std::cout << "At address " << this;
