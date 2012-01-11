@@ -3,14 +3,13 @@
 #include "auto_ptr.hpp"
 
 // Sample object
-class object {
+class object 
+{
 public:
 	int x;
 	
 	object(int t = 0) { x = t; }	
 };
-
-
 
 int main () 
 {
