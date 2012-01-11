@@ -35,7 +35,7 @@ public:
 		if (!isNull()) 
 	    {
     		std::cout << "At address " << &p;    	
-	      	del(ptr);
+	      	p.del(p.ptr);
 	    }
 		ptr = p.pointer();
   		p.ptr = 0; 

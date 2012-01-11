@@ -2,7 +2,6 @@
 #include "scoped_ptr.hpp"
 #include "auto_ptr.hpp"
 
-
 // Sample object
 class object {
 public:
@@ -10,6 +9,8 @@ public:
 	
 	object(int t = 0) { x = t; }	
 };
+
+
 
 int main () 
 {
